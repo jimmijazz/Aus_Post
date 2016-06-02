@@ -1,0 +1,35 @@
+
+import requests, base64, json
+from requests.auth import HTTPBasicAuth
+
+# Size and weight guidelines - http://auspost.com.au/parcels-mail/size-and-weight-guidelines.html
+
+api_key = YOUR_API_KEY
+password = YOUR_PASSWORD
+account = ACCOUNT NUMBER
+
+headers = {"AUTH-KEY": api_key,'account_number': account}
+# headers = {'account_number': account}
+
+# AUSPOST PARAMETERS
+from_postcode = "2000"
+to_postcode = "2800"
+length = "10"
+width = "10"
+height = "10"
+weight = "2"
+service_code = "AUS_PARCEL_REGULAR" #The chosen product/service coordinates
+
+
+url_prefix = "https://digitalapi.auspost.com.au/testbed/shipping/v1/accounts/"
+accountinfo = url_prefix + account
+print(accountinfo) # Print URL
+
+# Assign api_key to AUTH-KEY in header
+parcel_types = requests.get(accountinfo,headers=headers, auth=(api_key, password))
+
+try:
+    print(parcel_types.json())
+except:
+    print('Json cannot be parsed')
+# print(parcel_types.json())
