@@ -8,10 +8,7 @@ api_key = YOUR_API_KEY
 password = YOUR_PASSWORD
 account = ACCOUNT NUMBER
 
-headers = {"AUTH-KEY": api_key,'account_number': account}
-# headers = {'account_number': account}
-
-# AUSPOST PARAMETERS
+# AUSPOST PARAMETERS ( For Parcel Orders )
 from_postcode = "2000"
 to_postcode = "2800"
 length = "10"
@@ -20,7 +17,7 @@ height = "10"
 weight = "2"
 service_code = "AUS_PARCEL_REGULAR" #The chosen product/service coordinates
 
-
+#Remove testbed for regular api calls
 url_prefix = "https://digitalapi.auspost.com.au/testbed/shipping/v1/accounts/"
 accountinfo = url_prefix + account
 print(accountinfo) # Print URL
