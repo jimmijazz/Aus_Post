@@ -1,0 +1,20 @@
+{
+  "preferences":[
+    {
+      "type":"PRINT",
+      "groups":[
+        {
+          "group":"Parcel Post",
+          "layout": "A4-1pp",
+          "branded":true,
+          "left_offset":0,
+          "top_offset":0
+      }
+      ]
+
+
+    }
+
+  ],
+  "test_print":true
+}
