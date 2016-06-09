@@ -5,8 +5,6 @@
 # Size and weight guidelines - http://auspost.com.au/parcels-mail/size-and-weight-guidelines.html
 # parcelTypesUrl = "https://"+url_prefix+"/api/postage/parcel/domestic/calculate.json?from_postcode=%s&to_postcode=%s&length=%s&width=%s&height=%s&weight=%s&service_code=%s" % (from_postcode,to_postcode,length,width,height,weight,service_code)
 
-# Updated 7.52
-
 import requests, base64, json
 from requests.auth import HTTPBasicAuth
 
